@@ -17,10 +17,12 @@ class State(TypedDict):
 
 
 def main() -> None:
+    # SP-9 PR-A family-fix · standardized env-var contract across the
+    # adapter family: AINFERA_API_KEY + AINFERA_API_URL + AINFERA_MODEL.
     llm = ChatOpenAI(
-        model="claude-opus-4-7",
+        model=os.environ.get("AINFERA_MODEL", "ainfera-inference"),
         api_key=os.environ["AINFERA_API_KEY"],
-        base_url="https://api.ainfera.ai/v1",
+        base_url=os.environ.get("AINFERA_API_URL", "https://api.ainfera.ai/v1"),
     )
 
     def chat(state: State) -> dict:
