@@ -2,7 +2,7 @@
 
 **LangGraph integration + Ainfera Routing.** Build stateful graphs and agents — inference routed through Ainfera with signed audit per turn.
 
-Fleet dogfood: [Yavanna](https://github.com/ainfera-ai/ainfera-os/tree/main/agents/yavanna) (`ainfera-os`, LangGraph runtime).
+Fleet dogfood: [Yavanna](https://ainfera.ai/agents) (LangGraph runtime).
 
 ## Quickstart (curl only)
 
